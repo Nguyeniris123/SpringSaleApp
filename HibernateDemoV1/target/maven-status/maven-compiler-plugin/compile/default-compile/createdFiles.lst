@@ -1,0 +1,6 @@
+com/hcn/hibernatedemov1/HibernateUtils.class
+com/hcn/pojo/Product.class
+com/hcn/repositories/impl/ProductRepositoryImpl.class
+com/hcn/pojo/Category.class
+com/hcn/hibernatedemov1/HibernateDemoV1.class
+com/hcn/repositories/impl/CategoryRepositoryImpl.class
