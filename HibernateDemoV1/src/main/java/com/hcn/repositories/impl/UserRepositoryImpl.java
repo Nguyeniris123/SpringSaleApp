@@ -4,10 +4,24 @@
  */
 package com.hcn.repositories.impl;
 
+import com.hcn.hibernatedemov1.HibernateUtils;
+import com.hcn.pojo.User;
+import jakarta.persistence.Query;
+import org.hibernate.Hibernate;
+import org.hibernate.Session;
+
 /**
  *
  * @author nguyenho
  */
 public class UserRepositoryImpl {
-    
+    public User getUserByUsername (String username) {
+        try (Session s = HibernateUtils.getFACTORY().openSession()) {
+            Query q = s.createNamedQuery ("User.findByUsername", User.class);
+            q.setParameter("username", username);
+            
+            return (User) q.getSingleResult();
+        }
+        
+    }
 }

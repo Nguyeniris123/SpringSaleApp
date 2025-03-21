@@ -11,7 +11,7 @@ package com.hcn.pojo;
 public class Cart {
     private int id;
     private String name;
-    private double price;
+    private long price;
     private int quantity;
 
     /**
@@ -45,14 +45,14 @@ public class Cart {
     /**
      * @return the price
      */
-    public double getPrice() {
+    public long getPrice() {
         return price;
     }
 
     /**
      * @param price the price to set
      */
-    public void setPrice(double price) {
+    public void setPrice(long price) {
         this.price = price;
     }
 
