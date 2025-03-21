@@ -1,6 +1,13 @@
+com/hcn/pojo/User.class
+com/hcn/pojo/SaleOrder.class
+com/hcn/pojo/Category.class
 com/hcn/hibernatedemov1/HibernateUtils.class
+com/hcn/pojo/Comment.class
+com/hcn/pojo/ProdTag.class
+com/hcn/pojo/OrderDetail.class
+com/hcn/hibernatedemov1/HibernateDemoV1.class
 com/hcn/pojo/Product.class
 com/hcn/repositories/impl/ProductRepositoryImpl.class
-com/hcn/pojo/Category.class
-com/hcn/hibernatedemov1/HibernateDemoV1.class
+com/hcn/repositories/impl/StatRepositoryImpl.class
 com/hcn/repositories/impl/CategoryRepositoryImpl.class
+com/hcn/pojo/Tag.class

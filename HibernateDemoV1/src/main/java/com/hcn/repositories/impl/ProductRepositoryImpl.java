@@ -47,7 +47,7 @@ public class ProductRepositoryImpl {
                 
                 String cateId = params.get("categoryId");
                 if (cateId != null && !cateId.isEmpty())
-                    predicates.add(b.equal(root.get("category").as(Integer.class), cateId));
+                    predicates.add(b.equal(root.get("categoryId").as(Integer.class), cateId));
                 
                 q.where(predicates.toArray(Predicate[]::new));
                 
@@ -70,4 +70,31 @@ public class ProductRepositoryImpl {
             return query.getResultList();
         }
     }
+    
+    public Product getProductById(int id) {
+        try (Session s = HibernateUtils.getFACTORY().openSession()) {
+            return s.get(Product.class, id);
+        }
+    }
+    
+    public Product addOrUpdateProduct(Product p) {
+        try (Session s = HibernateUtils.getFACTORY().openSession()) {
+            if (p.getId() == null)
+                s.persist(p);
+            else 
+                s.merge(p);
+            
+            s.refresh(p);
+            
+            return p;
+        }
+    }
+    
+    public void deleteProduct (int id) {
+        try (Session s = HibernateUtils.getFACTORY().openSession()) {
+            Product p = this.getProductById(id);
+            s.remove(p);
+        }
+    }
+            
 }
