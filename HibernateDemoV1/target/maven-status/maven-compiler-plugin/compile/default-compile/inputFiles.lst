@@ -1,5 +1,6 @@
 /Users/nguyenho/Documents/GitHub/SpringSaleApp/HibernateDemoV1/src/main/java/com/hcn/hibernatedemov1/HibernateDemoV1.java
 /Users/nguyenho/Documents/GitHub/SpringSaleApp/HibernateDemoV1/src/main/java/com/hcn/hibernatedemov1/HibernateUtils.java
+/Users/nguyenho/Documents/GitHub/SpringSaleApp/HibernateDemoV1/src/main/java/com/hcn/pojo/Cart.java
 /Users/nguyenho/Documents/GitHub/SpringSaleApp/HibernateDemoV1/src/main/java/com/hcn/pojo/Category.java
 /Users/nguyenho/Documents/GitHub/SpringSaleApp/HibernateDemoV1/src/main/java/com/hcn/pojo/Comment.java
 /Users/nguyenho/Documents/GitHub/SpringSaleApp/HibernateDemoV1/src/main/java/com/hcn/pojo/OrderDetail.java
@@ -10,4 +11,6 @@
 /Users/nguyenho/Documents/GitHub/SpringSaleApp/HibernateDemoV1/src/main/java/com/hcn/pojo/User.java
 /Users/nguyenho/Documents/GitHub/SpringSaleApp/HibernateDemoV1/src/main/java/com/hcn/repositories/impl/CategoryRepositoryImpl.java
 /Users/nguyenho/Documents/GitHub/SpringSaleApp/HibernateDemoV1/src/main/java/com/hcn/repositories/impl/ProductRepositoryImpl.java
+/Users/nguyenho/Documents/GitHub/SpringSaleApp/HibernateDemoV1/src/main/java/com/hcn/repositories/impl/ReceiptRepositoryImpl.java
 /Users/nguyenho/Documents/GitHub/SpringSaleApp/HibernateDemoV1/src/main/java/com/hcn/repositories/impl/StatRepositoryImpl.java
+/Users/nguyenho/Documents/GitHub/SpringSaleApp/HibernateDemoV1/src/main/java/com/hcn/repositories/impl/UserRepositoryImpl.java
