@@ -22,7 +22,7 @@ public class CategoryServiceImpl implements CategoryService{
     
     @Override
     public List<Category> getCates() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return this.cateRepo.getCates();
     }
     
 }
