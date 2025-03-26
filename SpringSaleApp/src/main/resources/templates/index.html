@@ -7,6 +7,28 @@
 <body>
     <div th:replace="base :: header"></div>
     <main class="container">
+        <form th:action="@{/}">
+            <div class="mb-3 mt-3">
+                <input type="text" class="form-control" name="kw" placeholder="Nhập từ khoá" />
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="mb-3 mt-3">
+                        <input type="text" class="form-control" name="fromPrice" placeholder="Giá min" />
+                    </div>
+                </div>
+                <div class="col-6">
+                     <div class="mb-3 mt-3">
+                        <input type="text" class="form-control" name="toPrice" placeholder="Gía max" />
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mb-3 mt-3">
+                <button class="btn btn-info" type="submit">Tìm kiếm</button>
+            </div>
+        </form>
+
         <button class="btn btn-info mt-2 mb-2">Thêm sản phẩm</button>
         <table class="table table-striped">
             <thead>
@@ -31,7 +53,7 @@
                         <button class="btn btn-danger">&times;</button>
                         <a href="#" class="btn btn-success">✏</a>
                     </td>
-                    
+
                 </tr>
             </tbody>
         </table>
