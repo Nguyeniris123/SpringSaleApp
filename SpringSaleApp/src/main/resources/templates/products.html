@@ -1,0 +1,36 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Quản lý sản phẩm</title>
+    <th:block th:replace="base :: bootstrap"></th:block>
+</head>
+<body>
+    <div th:replace="base :: header"></div>
+    <main class="container">
+        <h1 class="text-center text-info mt-1">QUẢN LÝ SẢN PHẨM</h1>
+        <form method="post" th:action="@{/add}" th:object="${product}">
+            <div class="mb-3 mt-3">
+                <label for="name" class="form-label">Tên sản phẩm</label>
+                <input type="text" class="form-control" id="name" placeholder="Tên sản phẩm" th:field="*{name}" />
+            </div>
+
+            <div class="mb-3 mt-3">
+                <label for="price" class="form-label">Giá sản phẩm</label>
+                <input type="text" class="form-control" id="price" placeholder="Giá sản phẩm" th:field="*{price}" />
+            </div>
+
+            <div class="mb-3 mt-3">
+                <label for="cate" class="form-label">Danh mục sản phẩm</label>
+                <select class="form-select" th:field="*{categoryId}" id="cate">
+                    <option th:each="c: ${categories}" th:value="${c.id}" th:text="${c.name}">1</option>
+                </select>
+            </div>
+
+            <div class="mb-3 mt-3">
+                <input type="hidden" class="form-control" th:field="*{id}" />
+                <button class="btn btn-success mt-1" type="submit">Thêm sản phẩm</button>
+            </div>
+        </form>
+    </main>
+    <div th:replace="base :: footer"></div>
+</body>

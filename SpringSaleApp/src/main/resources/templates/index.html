@@ -29,7 +29,7 @@
             </div>
         </form>
 
-        <button class="btn btn-info mt-2 mb-2">Thêm sản phẩm</button>
+        <a th:href="@{/products}" class="btn btn-info mt-2 mb-2">Thêm sản phẩm</a>
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -51,7 +51,7 @@
                     <td th:text="${p.price + 'VND'}"></td>
                     <td>
                         <button class="btn btn-danger">&times;</button>
-                        <a href="#" class="btn btn-success">✏</a>
+                        <a th:href="@{'/products/' + ${p.id}}" class="btn btn-success">✏</a>
                     </td>
 
                 </tr>
