@@ -2,40 +2,42 @@
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>Trang chủ</title>
-        <th:block th:replace="base :: bootstrap"></th:block>
-    </head>
-    <body>
-        <div th:replace="base :: header"></div>
-        <main class="container">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Firstname</th>
-                        <th>Lastname</th>
-                        <th>Email</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>John</td>
-                        <td>Doe</td>
-                        <td>john@example.com</td>
-                    </tr>
-                    <tr>
-                        <td>Mary</td>
-                        <td>Moe</td>
-                        <td>mary@example.com</td>
-                    </tr>
-                    <tr>
-                        <td>July</td>
-                        <td>Dooley</td>
-                        <td>july@example.com</td>
-                    </tr>
-                </tbody>
-            </table>
-        </main>
+    <th:block th:replace="base :: bootstrap"></th:block>
+</head>
+<body>
+    <div th:replace="base :: header"></div>
+    <main class="container">
+        <button class="btn btn-info mt-2 mb-2">Thêm sản phẩm</button>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>id</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Giá sản phẩm</th>
+                    <th></th>
 
-        <div th:replace="base :: footer"></div>
-    </body>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="p: ${products}">
+                    <td>
+                        <img th:src="${p.image}" width="300"/>
+                    </td>
+                    <td th:text="${p.id}"></td>
+                    <td th:text="${p.name}"></td>
+                    <td th:text="${p.price + 'VND'}"></td>
+                    <td>
+                        <button class="btn btn-danger">&times;</button>
+                        <a href="#" class="btn btn-success">✏</a>
+                    </td>
+                    
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <div th:replace="base :: footer"></div>
+</body>
 </html>
 
