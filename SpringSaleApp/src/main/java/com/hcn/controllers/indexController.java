@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 @Controller
 @ControllerAdvice
-public class IndexController {
+public class indexController {
 
     @Autowired
     private CategoryService cateService;
